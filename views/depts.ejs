@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Depts Page - Express App</title>
+    </head>
+    <body>
+            <h2>All Departments Details</h2>
+            <hr/>
+<a href="/CreateDept">Create Department</a>
+    </br>
+        <table border="2">
+            <tr>
+                <th>Deptno</th>
+                <th>Dname</th>
+                <th>Location</th>
+                <th></th>
+            </tr>    
+            <%  
+            for(var i in data) { %>
+                <tr>
+                       <td> <%= data[i].deptno  %> </td> 
+                       <td> <%= data[i].dname  %> </td> 
+                       <td> <%= data[i].loc  %> </td> 
+                       
+                       <td> 
+                        <a href="/DeptDetails/<%= data[i].deptno %>">Details</a>   |  
+                        <a href="/DeleteDept/<%= data[i].deptno %>">Delete</a>  |
+                        <a href="/EditDept/<%= data[i].deptno %>">Edit</a> 
+                     </td>
+                </tr>
+            <%  } %>
+        </table>    
+             
+                
+    </body>
+</html>
+
+    

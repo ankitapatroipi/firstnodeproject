@@ -1,0 +1,23 @@
+<html>
+  <body>	 
+	<h1> Edit Department </h1> 
+	<hr />	
+	<form action="/EditEmpDetails" method="POST">
+		<fieldset>
+			<legend>Edit Dept Details</legend>
+			<br />			
+			EmployeeID :  	<input 	type="text" readonly value="<%=empObj.employeeID%>"  name="t1"  />			
+			<br />	<br />			
+			EmployeeName :  <input 	type="text" value="<%=empObj.EmployeeName%>"  name="t2"  />		
+            <br /> <br />
+            Proffession:  <input 	type="text" value="<%=empObj.Proffession%>" name="t3"  />		
+			<br /> <br />
+			<input 	type="submit" value=" Edit " />			
+		</fieldset>
+    </form>
+    <hr/>
+<a href="/">Back to Depts</a>
+ </body>
+</html>
+
+

@@ -1,0 +1,23 @@
+<html>
+  <body>	 
+	<h1> Edit Department </h1> 
+	<hr />	
+	<form action="/EditDept" method="POST">
+		<fieldset>
+			<legend>Edit Dept Details</legend>
+			<br />			
+			Deptno :  	<input 	type="text" readonly value="<%=deptObj.deptno%>"  name="t1"  />			
+			<br />	<br />			
+			Dname :  <input 	type="text" value="<%=deptObj.dname%>"  name="t2"  />		
+            <br /> <br />
+            Location :  <input 	type="text" value="<%=deptObj.loc%>" name="t3"  />		
+			<br /> <br />
+			<input 	type="submit" value=" Edit " />			
+		</fieldset>
+    </form>
+    <hr/>
+<a href="/">Back to Depts</a>
+ </body>
+</html>
+
+

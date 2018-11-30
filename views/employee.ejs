@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Employee page- Express App</title>
+    </head>
+    <body>
+            <h2>All Employee Details</h2>
+            <hr/>
+            <a href="/Createempdept">Create Department</a>
+        </br>
+        <table border="2">
+            <tr>
+                <th>employeeID</th>
+                <th>EmployeeName</th>
+                <th>Proffession</th>
+                <th></th>
+            </tr>    
+            <%  
+            for(var i in data) { %>
+                <tr>
+                       <td> <%= data[i].employeeID %> </td> 
+                       <td> <%= data[i].EmployeeName %> </td> 
+                       <td> <%= data[i].Proffession  %> </td>
+                       
+                       <td> <a href="/EmpDetails/<%= data[i].employeeID%>">Details</a>|
+                        <a href="/DeleteempDept/<%= data[i].employeeID%>">Delete</a>|
+                        <a href="/EditEmpDetails/<%= data[i].employeeID%>">edit</a> </td>
+                </tr>
+            <%  } %>
+        </table>    
+             
+                
+    </body>
+</html>
